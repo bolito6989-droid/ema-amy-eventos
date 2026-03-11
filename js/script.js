@@ -1,0 +1,1 @@
+console.log("Ema & Amy Web Premium cargada");
