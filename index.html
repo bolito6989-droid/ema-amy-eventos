@@ -6,87 +6,91 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Ema & Amy | Animaciones Infantiles</title>
+<title>Ema & Amy Eventos</title>
 
 <link rel="stylesheet" href="css/style.css">
-
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 
 </head>
 
 <body>
 
-<!-- GLOBOS ANIMADOS -->
-
-<div class="balloons">
-<div class="balloon"></div>
-<div class="balloon"></div>
-<div class="balloon"></div>
-<div class="balloon"></div>
-<div class="balloon"></div>
-</div>
+<canvas id="balloons"></canvas>
 
 <header>
 
-<div class="logo">
-<h1>Ema & Amy</h1>
-<p>Animaciones infantiles divertidas</p>
-</div>
+<h1>Ema & Amy Eventos</h1>
 
 <nav>
+
 <a href="#servicios">Servicios</a>
-<a href="#galeria">Galería</a>
-<a href="#contacto">Contacto</a>
+<a href="#contador">Experiencia</a>
+<a href="#calendario">Calendario</a>
+<a href="reservas.html">Reservar</a>
+
 </nav>
 
 </header>
 
 
-<section class="hero">
+<section class="hero-video">
 
-<h2>La diversión perfecta para tus fiestas infantiles</h2>
+<video autoplay muted loop class="bg-video">
 
-<p>Hacemos que cada cumpleaños sea una experiencia mágica</p>
+<source src="https://cdn.coverr.co/videos/coverr-kids-party-2714/1080p.mp4" type="video/mp4">
 
-<a class="btn" href="https://wa.me/593988038813">Reservar Evento</a>
+</video>
+
+<div class="hero-content">
+
+<h2>Fiestas infantiles inolvidables</h2>
+
+<p>Animación • Juegos • DJ profesional</p>
+
+<a class="btn" href="reservas.html">Reservar evento</a>
+
+</div>
 
 </section>
 
 
 <section id="servicios" class="servicios">
 
-<h2>Nuestros Servicios</h2>
+<h2>Servicios</h2>
 
 <div class="grid">
 
-<div class="card">
-<h3>🎨 Pinta Caritas</h3>
-<p>Diseños coloridos y divertidos.</p>
+<div class="card">🎨 Pinta caritas</div>
+<div class="card">🎈 Globoflexia</div>
+<div class="card">🎭 Dinámicas</div>
+<div class="card">🎮 Juegos infantiles</div>
+<div class="card">🎉 Piñata</div>
+<div class="card">💃 Bailes</div>
+<div class="card">🎧 DJ para fiestas</div>
+
 </div>
 
-<div class="card">
-<h3>🎭 Dinámicas</h3>
-<p>Juegos y actividades animadas.</p>
+</section>
+
+
+<section id="contador" class="contador">
+
+<h2>Nuestra experiencia</h2>
+
+<div class="numeros">
+
+<div>
+<div class="numero" data-target="350">0</div>
+<p>Fiestas realizadas</p>
 </div>
 
-<div class="card">
-<h3>💃 Bailes</h3>
-<p>Coreografías infantiles.</p>
+<div>
+<div class="numero" data-target="1200">0</div>
+<p>Niños felices</p>
 </div>
 
-<div class="card">
-<h3>🎮 Juegos</h3>
-<p>Tradicionales y modernos.</p>
-</div>
-
-<div class="card">
-<h3>🎈 Globoflexia</h3>
-<p>Figuras increíbles con globos.</p>
-</div>
-
-<div class="card">
-<h3>🎉 Piñata</h3>
-<p>Animación completa de piñata.</p>
+<div>
+<div class="numero" data-target="5">0</div>
+<p>Años de experiencia</p>
 </div>
 
 </div>
@@ -94,48 +98,39 @@
 </section>
 
 
-<section id="galeria" class="galeria">
+<section id="calendario" class="calendario">
 
-<h2>Momentos Divertidos</h2>
+<h2>Calendario de eventos</h2>
 
-<div class="galeria-grid">
+<input type="date" id="fechaEvento">
 
-<div class="foto"></div>
-<div class="foto"></div>
-<div class="foto"></div>
-<div class="foto"></div>
+<button onclick="verDisponibilidad()">Ver disponibilidad</button>
 
-</div>
+<p id="estado"></p>
 
 </section>
 
 
-<section id="contacto" class="contacto">
+<section class="ia">
 
-<h2>Contáctanos</h2>
+<h2>Organizador inteligente de fiesta</h2>
 
-<p>Daniela Rubio & Bolívar Salazar</p>
+<input type="number" id="edad" placeholder="Edad del niño">
 
-<div class="telefonos">
+<input type="number" id="invitados" placeholder="Número de invitados">
 
-<a href="tel:0988038813">📞 0988038813</a>
-<a href="tel:0959471333">📞 0959471333</a>
+<button onclick="planificar()">Planificar fiesta</button>
 
-</div>
-
-<a class="btn" href="https://wa.me/593988038813">WhatsApp</a>
+<p id="plan"></p>
 
 </section>
 
 
 <footer>
 
-<p>© 2026 Ema & Amy Animaciones</p>
+<p>© 2026 Ema & Amy Eventos</p>
 
 </footer>
-
-
-<a class="whatsapp" href="https://wa.me/593988038813">💬</a>
 
 <script src="js/script.js"></script>
 
