@@ -10,129 +10,123 @@
 
 <link rel="stylesheet" href="css/style.css">
 
+<link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;600&display=swap" rel="stylesheet">
+
 </head>
 
 <body>
 
-<canvas id="balloons"></canvas>
+<canvas id="magic"></canvas>
 
-<header>
+<header class="header">
 
-<h1>Ema & Amy Eventos</h1>
+<div class="logo">Ema & Amy</div>
 
-<nav>
+<nav class="nav">
 
 <a href="#servicios">Servicios</a>
-<a href="#contador">Experiencia</a>
-<a href="#calendario">Calendario</a>
-<a href="reservas.html">Reservar</a>
+<a href="#galeria">Galería</a>
+<a href="#personajes">Personajes</a>
+<a href="#juego">Juego</a>
+<a href="#" class="nav-btn">Reservar</a>
 
 </nav>
 
 </header>
 
 
-<section class="hero-video">
+<section class="hero">
 
-<video autoplay muted loop class="bg-video">
+<video autoplay muted loop playsinline class="hero-video">
 
-<source src="https://cdn.coverr.co/videos/coverr-kids-party-2714/1080p.mp4" type="video/mp4">
+<source src="video/hero.mp4" type="video/mp4">
 
 </video>
 
+<div class="hero-overlay"></div>
+
 <div class="hero-content">
 
-<h2>Fiestas infantiles inolvidables</h2>
+<h1>Fiestas infantiles mágicas</h1>
 
 <p>Animación • Juegos • DJ profesional</p>
 
-<a class="btn" href="reservas.html">Reservar evento</a>
+<a href="#" class="btn">Reservar evento</a>
 
 </div>
 
 </section>
 
 
-<section id="servicios" class="servicios">
+<section id="servicios" class="container">
 
 <h2>Servicios</h2>
 
-<div class="grid">
+<div class="cards">
 
 <div class="card">🎨 Pinta caritas</div>
 <div class="card">🎈 Globoflexia</div>
 <div class="card">🎭 Dinámicas</div>
-<div class="card">🎮 Juegos infantiles</div>
+<div class="card">🎮 Juegos</div>
 <div class="card">🎉 Piñata</div>
 <div class="card">💃 Bailes</div>
-<div class="card">🎧 DJ para fiestas</div>
+<div class="card card-dj">🎧 DJ profesional</div>
 
 </div>
 
 </section>
 
 
-<section id="contador" class="contador">
+<section id="galeria" class="container">
 
-<h2>Nuestra experiencia</h2>
+<h2>Galería</h2>
 
-<div class="numeros">
+<div class="galeria">
 
-<div>
-<div class="numero" data-target="350">0</div>
-<p>Fiestas realizadas</p>
-</div>
-
-<div>
-<div class="numero" data-target="1200">0</div>
-<p>Niños felices</p>
-</div>
-
-<div>
-<div class="numero" data-target="5">0</div>
-<p>Años de experiencia</p>
-</div>
+<img src="img/fiesta1.jpg">
+<img src="img/fiesta2.jpg">
+<img src="img/fiesta3.jpg">
 
 </div>
 
 </section>
 
 
-<section id="calendario" class="calendario">
+<section id="personajes" class="container">
 
-<h2>Calendario de eventos</h2>
+<h2>Personajes</h2>
 
-<input type="date" id="fechaEvento">
+<div class="characters">
 
-<button onclick="verDisponibilidad()">Ver disponibilidad</button>
+<img src="img/personaje1.png">
+<img src="img/personaje2.png">
 
-<p id="estado"></p>
+</div>
 
 </section>
 
 
-<section class="ia">
+<section id="juego" class="container">
 
-<h2>Organizador inteligente de fiesta</h2>
+<h2>Mini juego</h2>
 
-<input type="number" id="edad" placeholder="Edad del niño">
+<button onclick="startGame()" class="btn">Comenzar</button>
 
-<input type="number" id="invitados" placeholder="Número de invitados">
+<p>Puntos: <span id="score">0</span></p>
 
-<button onclick="planificar()">Planificar fiesta</button>
-
-<p id="plan"></p>
+<div id="gameArea"></div>
 
 </section>
 
 
 <footer>
 
-<p>© 2026 Ema & Amy Eventos</p>
+© 2026 Ema & Amy Eventos
 
 </footer>
 
-<script src="js/script.js"></script>
+<script src="js/magic.js"></script>
+<script src="js/game.js"></script>
 
 </body>
 </html>
